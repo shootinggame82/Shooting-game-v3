@@ -17,4 +17,8 @@ The python script need pyserial and mysql.connect
 On arduino you need the nrf24 library (see link below to download)
 
 Please note that is programmed in platformIO so the code is little different than programming on
-arduino IDE
+arduino IDE: https://platformio.org 
+
+# Library for Arduino
+You need the NRF24 library to make it work with Arduino, that is the onlything you need.
+You can download it here: https://github.com/nRF24/RF24
