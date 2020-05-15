@@ -116,7 +116,7 @@ void setup()
   delay(100);
   myRadio.begin();
   myRadio.setPALevel(RF24_PA_MIN); //Use MIN on testing, change to MAX when they working good.
-  myRadio.setDataRate(RF24_250KBPS);
+  myRadio.setDataRate(RF24_250KBPS); //Lower datarate gives longer distans
   myRadio.setRetries(15, 15);
   myRadio.setChannel(108); //Keep abow wifi channels
   myRadio.openReadingPipe(1, addresses[1]);
@@ -135,8 +135,7 @@ void loop()
     #ifdef DEBUG
       Serial.println("Radio Avalible");
       #endif
-    //while (myRadio.available(addresses[1]))
-    //{
+    
       myRadio.read(&inkommande, sizeof(inkommande));
 
       if (inkommande.I == targID)
@@ -160,7 +159,7 @@ void loop()
           testTransmiter();
         }
       }
-    //}
+   
   }
 }
 
@@ -239,7 +238,7 @@ void testTransmiter()
 #ifdef DEBUG
   Serial.println("Sending recive response " + String(utgaende.K));
 #endif
-  //myRadio.openWritingPipe(addresses[0]);
+  
   myRadio.stopListening();
   delay(100);
   bool rslt;
