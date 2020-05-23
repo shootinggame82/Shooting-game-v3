@@ -21,7 +21,7 @@ import mysql.connector as mysql
 import os
 import sys
 import time
-
+time.sleep(10)
 GPIO.setmode(GPIO.BCM) 
 db = mysql.connect(
     host="localhost",
