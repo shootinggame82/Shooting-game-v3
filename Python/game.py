@@ -1,7 +1,16 @@
 #!/usr/bin/python
+# Arduino Shooting Game
+# Developed and coded by Andreas Olsson
+# This system is free to use, modify if you need, but i cannot give you support then.
+# To use this system you need Arduino and Raspberry Pi.
+# Follow my facebook page for info on updates on the system.
+# Please visit my blog page for more info and links to facebook and how to build it:
+# https://shootinggameblog.wordpress.com
+# If you need support, contact me thru the facebook page in English or Swedish
+# If you find some bugs, please inform me.
 # The game function will be build from here. Uses serial and mysql to work.
 # The webpage updates mysql that this python script will check and start working.
-# This must be run in cronjob every secound on the Pi Computer.
+# This must be started with the boot.
 # ID number for game types: 1 = Quickdraw, 2 = Timedmode, 3 = Rapidfire
 
 #import MySQLdb
@@ -12,7 +21,6 @@ from datetime import date
 from datetime import datetime
 
 now = datetime.now()
-#time.sleep(20)
 # Add support for serial, uncomment when arduino is connected
 ser = serial.Serial('/dev/ttyUSB0', 9600)
 time.sleep(10)
@@ -52,12 +60,9 @@ db = mysql.connect(
 )
 
 
-#db = MySQLdb.connect(host='localhost', user='admin', passwd='tantamalia', db='shooting')
-
 while True:
     db.commit()
     # Check if we are going to send over targets.
-    #print("Wait for job")
     tacur = db.cursor()
     sqlo = "SELECT * FROM settings WHERE id = 1"
     tacur.execute(sqlo)
