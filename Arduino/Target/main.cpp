@@ -207,20 +207,13 @@ void targetHit()
 #endif
       myRadio.stopListening();
       delay(100);
-      bool rslt;
-     rslt =  myRadio.write(&utgaende, sizeof(utgaende));
-     if (rslt) {
-        
+      myRadio.write(&utgaende, sizeof(utgaende));
+     
       shootMode = 0;
         #ifdef DEBUG
       Serial.println("Send OK");
       #endif
-      } else {
-        myRadio.write(&utgaende, sizeof(utgaende));
-        #ifdef DEBUG
-      Serial.println("Send Failed");
-      #endif
-      }
+      
       delay(100);
       myRadio.startListening();
     }
@@ -241,9 +234,8 @@ void testTransmiter()
   
   myRadio.stopListening();
   delay(100);
-  bool rslt;
-     rslt =  myRadio.write(&utgaende, sizeof(utgaende));
-     if (rslt) {
+  myRadio.write(&utgaende, sizeof(utgaende));
+  
        delay(100);
   digitalWrite(LEDblue, HIGH);
   digitalWrite(LEDgreen, LOW);
@@ -260,11 +252,7 @@ void testTransmiter()
   utgaende.L = 0;
   delay(100);
   digitalWrite(LEDgreen, HIGH);
-     } else {
-       utgaende.L = 0;
-  delay(100);
-  digitalWrite(LEDgreen, HIGH);
-     }
+     
   myRadio.startListening();
   
   #ifdef DEBUG
