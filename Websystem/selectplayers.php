@@ -215,8 +215,8 @@ $playto = $row['plto'];
 // set "position.of" to the same link as above
 $('#hidden_<?php echo $i; ?>')
 	.keyboard({
-		language     : "sv", //en for english sv for swedish
-		layout   : 'swedish-qwerty', //qwerty for english swedish-qwerty for swedish
+		language     : "en", //en for english sv for swedish
+		layout   : 'qwerty', //qwerty for english swedish-qwerty for swedish
 		position : {
 			of : $('.hiddenInput_<?php echo $i; ?>'),
 			my : 'center top',
