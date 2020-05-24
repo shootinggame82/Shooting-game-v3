@@ -1,8 +1,16 @@
 /*
-Arduino Shooting Game
-Created and coded by Andreas Olsson
-http://shootinggameblog.wordpress.com
-Free to use and Modify
+	Arduino Shooting Game
+	Developed and coded by Andreas Olsson
+	This system is free to use, modify if you need, but i cannot give you support then.
+	To use this system you need Arduino and Raspberry Pi.
+	Follow my facebook page for info on updates on the system.
+	
+	Please visit my blog page for more info and links to facebook and how to build it:
+		https://shootinggameblog.wordpress.com
+	
+	If you need support, contact me thru the facebook page in English or Swedish
+	If you find some bugs, please inform me.
+  
 This is the targets code. Each target need it's own identification code.
 During the test process, you can use the DEBUG if you need to serial text.
 But don't use it during the live process.
