@@ -1,10 +1,17 @@
 /*
-Arduino Shooting Game
-Created and coded by Andreas Olsson
-http://shootinggameblog.wordpress.com
-Free to use and Modify
+	Arduino Shooting Game
+	Developed and coded by Andreas Olsson
+	This system is free to use, modify if you need, but i cannot give you support then.
+	To use this system you need Arduino and Raspberry Pi.
+	Follow my facebook page for info on updates on the system.
+	
+	Please visit my blog page for more info and links to facebook and how to build it:
+		https://shootinggameblog.wordpress.com
+	
+	If you need support, contact me thru the facebook page in English or Swedish
+	If you find some bugs, please inform me.
+  
 We use serial to communicate. small letters to activate different functions.
-The x letter is to respond that we got the info.
 It has built in failsafe so it not get stuck. You can set the time on myDesiredTime
 Comment out DEBUG define tag before you use it live. This hide debug text on serial monitor.
 */
