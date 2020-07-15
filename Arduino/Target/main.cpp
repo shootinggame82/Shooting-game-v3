@@ -202,8 +202,8 @@ void targetHit()
     #else
     int val = analogRead(knockSensor);
     if (digitalRead(knockSensor) == HIGH)
-    #endif
     {
+#endif
 #ifdef DEBUG
       Serial.println("Knock");
 #endif
